@@ -29,3 +29,8 @@
 .navbar-arte .navbar-toggler-icon {
     filter: invert(1);
 }
+
+/* Tamaño de los titulos de las tarjetas */
+.card-title {
+    font-size: 18px;
+}
