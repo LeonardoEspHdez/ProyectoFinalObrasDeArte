@@ -34,3 +34,15 @@
 .card-title {
     font-size: 18px;
 }
+
+/* Pie de página */
+footer {
+    background-color: #1E3C2A;
+    padding: 25px;
+}
+
+footer p {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
