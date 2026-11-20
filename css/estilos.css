@@ -1,0 +1,31 @@
+/* Estilos de la barra de navegacion */
+.navbar-arte {
+    background-color: #1E3C2A;
+}
+
+/* Nombre de la pagina */
+.navbar-arte .navbar-brand {
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Enlaces del menu */
+.navbar-arte .nav-link {
+    color: white;
+}
+
+/* Color blanco para el enlace activo */
+.navbar-arte .navbar-nav .nav-link.active {
+    color: white;
+}
+
+/* Subrayado al pasar el cursor */
+.navbar-arte .nav-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Boton del menu responsivo */
+.navbar-arte .navbar-toggler-icon {
+    filter: invert(1);
+}
