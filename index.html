@@ -69,56 +69,112 @@
         </button>
     </div>
 
-    <!-- Explora la colección de arte -->
-    <section class="container" id="coleccion">
+    <!-- Formulario de búsqueda -->
+    <main>
+        <section class="container" id="cuadro-de-busqueda">
 
-        <h1>Explora la colección de arte</h1>
+            <h2>Búsqueda de obras de arte</h2>
 
-        <p>Descubre obras y artistas de diferentes épocas.</p>
+            <!-- sección del formulario -->
+            <form name="formBusqueda" id="formBusqueda" role="search">
 
-        <hr>
+                <div class="mb-3">
+                    <label for="cadenaBusqueda" class="form-label">
+                        Buscar por:
+                    </label>
 
-        <div class="row">
+                    <input type="text" class="form-control" id="cadenaBusqueda" required />
+                </div>
 
-            <!-- Primera obra -->
-            <div class="col-md-4">
-                <div class="card h-100" style="width: 90%;">
-                    <img src="img/bisonte-de-altamira.JPG" class="card-img-top"
-                        alt="Bisonte del techo de la Gran Sala de la cueva de Altamira">
-                    <div class="card-body">
-                        <h3 class="card-title">Bisonte de Altamira</h3>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card’s content.</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="criterio" id="radioTitulo" value="q" checked />
+                    <label class="form-check-label" for="radioTitulo">
+                        Título
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="criterio" id="radioTipo" value="tipo" />
+                    <label class="form-check-label" for="radioTipo">
+                        Tipo
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="criterio" id="radioAnio" value="anio" />
+                    <label class="form-check-label" for="radioAnio">
+                        Año
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="criterio" id="radioMovimiento" value="m" />
+                    <label class="form-check-label" for="radioMovimiento">
+                        Movimiento
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-3">
+                    Buscar
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Explora la colección de arte -->
+        <section class="container" id="coleccion">
+
+            <h1>Explora la colección de arte</h1>
+
+            <p>Descubre obras y artistas de diferentes épocas.</p>
+
+            <hr>
+
+            <div class="row">
+
+                <!-- Primera obra -->
+                <div class="col-md-4">
+                    <div class="card h-100" style="width: 90%;">
+                        <img src="img/bisonte-de-altamira.JPG" class="card-img-top"
+                            alt="Bisonte del techo de la Gran Sala de la cueva de Altamira">
+                        <div class="card-body">
+                            <h3 class="card-title">Bisonte de Altamira</h3>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card’s content.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Segunda obra -->
-            <div class="col-md-4">
-                <div class="card h-100" style="width: 90%;">
-                    <img src="img/la-creacion-del-hombre.JPG" class="card-img-top" alt="La Creación del Hombre">
-                    <div class="card-body">
-                        <h3 class="card-title">La Creación del Hombre</h3>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card’s content.</p>
+                <!-- Segunda obra -->
+                <div class="col-md-4">
+                    <div class="card h-100" style="width: 90%;">
+                        <img src="img/la-creacion-del-hombre.JPG" class="card-img-top" alt="La Creación del Hombre">
+                        <div class="card-body">
+                            <h3 class="card-title">La Creación del Hombre</h3>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card’s content.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Tercera obra -->
-            <div class="col-md-4">
-                <div class="card h-100" style="width: 90%;">
-                    <img src="img/cristo-muerto.JPG" class="card-img-top" alt="Cristo Muerto">
-                    <div class="card-body">
-                        <h3 class="card-title">Cristo Muerto</h3>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card’s content.</p>
+                <!-- Tercera obra -->
+                <div class="col-md-4">
+                    <div class="card h-100" style="width: 90%;">
+                        <img src="img/cristo-muerto.JPG" class="card-img-top" alt="Cristo Muerto">
+                        <div class="card-body">
+                            <h3 class="card-title">Cristo Muerto</h3>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card’s content.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
 
     <!-- Pie de página -->
     <footer>

@@ -46,3 +46,20 @@ footer p {
     font-weight: bold;
     color: white;
 }
+
+/* Color de fondo de la pagina */
+body {
+    background-color: #FBF5EE;
+}
+
+/* Margen del contenido principal */
+main {
+    margin: 10px;
+}
+
+/* Panel de busqueda */
+#cuadro-de-busqueda {
+    padding: 15px;
+    background-color: #D6CCC0;
+    border-radius: 10px;
+}
