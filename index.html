@@ -2,28 +2,40 @@
 <html lang="es">
 
 <head>
+    <!-- Configuracion principal de la pagina -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titulo que aparece en la pestaña del navegador -->
     <title>Campus Jalpa - Arte y Cultura</title>
+
+    <!-- Enlace para utilizar Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+
+    <!-- Enlace a los estilos propios de la pagina -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-    <!-- barra de navegacion -->
+
+    <!-- Barra de navegacion principal -->
     <nav class="navbar navbar-expand-lg navbar-arte">
         <div class="container-fluid">
+
+            <!-- Nombre de la pagina -->
             <a class="navbar-brand" href="#" style="font-weight: bold;">
                 Campus Jalpa Arte y Cultura
             </a>
 
+            <!-- Boton que muestra el menu en pantallas pequeñas -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- Opciones del menu de navegacion -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
 
@@ -44,77 +56,91 @@
         </div>
     </nav>
 
-    <!-- Carrusel -->
+    <!-- Carrusel con las imagenes principales -->
     <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
+
+            <!-- Primera imagen del carrusel -->
             <div class="carousel-item active">
                 <img src="img/pintura.jpg" class="d-block w-100" alt="Colección de pinturas">
             </div>
+
+            <!-- Segunda imagen del carrusel -->
             <div class="carousel-item">
                 <img src="img/artesanias.jpg" class="d-block w-100" alt="Colección de artesanías">
             </div>
+
+            <!-- Tercera imagen del carrusel -->
             <div class="carousel-item">
                 <img src="img/patrimonio.jpg" class="d-block w-100" alt="Colección de patrimonios">
             </div>
         </div>
 
+        <!-- Boton para regresar a la imagen anterior -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
 
+        <!-- Boton para avanzar a la siguiente imagen -->
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
 
-    <!-- Formulario de búsqueda -->
+    <!-- Formulario para buscar obras de arte -->
     <main>
         <section class="container" id="cuadro-de-busqueda">
 
-            <h2>Búsqueda de obras de arte</h2>
+            <!-- Encabezado para identificar el formulario -->
+            <h2 class="visually-hidden">Formulario de búsqueda</h2>
 
-            <!-- sección del formulario -->
+            <!-- JavaScript utiliza este formulario para obtener los datos de la busqueda -->
             <form name="formBusqueda" id="formBusqueda" role="search">
 
+                <!-- Campo donde se escribe lo que se desea buscar -->
                 <div class="mb-3">
                     <label for="cadenaBusqueda" class="form-label">
                         Buscar por:
                     </label>
 
-                    <input type="text" class="form-control" id="cadenaBusqueda" required />
+                    <input type="text" class="form-control" id="cadenaBusqueda" required>
+
+                    <!-- Aqui se muestran los mensajes cuando hay algun error -->
                     <p id="errorBusqueda" class="text-danger small mb-0" aria-live="polite"></p>
                 </div>
 
+                <!-- Opciones para seleccionar el tipo de busqueda -->
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="criterio" id="radioTitulo" value="q" checked />
+                    <input class="form-check-input" type="radio" name="criterio" id="radioTitulo" value="q" checked>
                     <label class="form-check-label" for="radioTitulo">
                         Título
                     </label>
                 </div>
 
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="criterio" id="radioTipo" value="tipo" />
+                    <input class="form-check-input" type="radio" name="criterio" id="radioTipo" value="tipo">
                     <label class="form-check-label" for="radioTipo">
                         Tipo
                     </label>
                 </div>
 
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="criterio" id="radioAnio" value="anio" />
+                    <input class="form-check-input" type="radio" name="criterio" id="radioAnio" value="anio">
                     <label class="form-check-label" for="radioAnio">
                         Año
                     </label>
                 </div>
 
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="criterio" id="radioMovimiento" value="m" />
+                    <input class="form-check-input" type="radio" name="criterio" id="radioMovimiento" value="m">
                     <label class="form-check-label" for="radioMovimiento">
                         Movimiento
                     </label>
                 </div>
 
+                <!-- Boton que envia la busqueda -->
                 <button type="submit" class="btn btn-primary mt-3">
                     Buscar
                 </button>
@@ -122,14 +148,16 @@
             </form>
         </section>
 
-        <!-- sección para mostrar los resultados -->
-        <section class="container mt-3" id="seccion-respuestas">
+        <!-- Contenedor donde JavaScript muestra las obras que devuelve la API -->
+        <div class="container mt-3" id="seccion-respuestas">
             <div class="row">
-                <section class="col mt-2" id="publicaciones"></section>
-            </div>
-        </section>
 
-        <!-- Explora la colección de arte -->
+                <!-- JavaScript coloca aqui las fichas de las obras encontradas -->
+                <div class="col mt-2" id="publicaciones"></div>
+            </div>
+        </div>
+
+        <!-- Seccion con las tres obras que aparecen al abrir la pagina -->
         <section class="container" id="coleccion">
 
             <h1>Explora la colección de arte</h1>
@@ -138,9 +166,12 @@
 
             <hr>
 
+            <!-- Encabezado para organizar los titulos de las obras -->
+            <h2 class="visually-hidden">Obras de la colección</h2>
+
             <div class="row">
 
-                <!-- Primera obra -->
+                <!-- Primera obra de la coleccion -->
                 <div class="col-md-4">
                     <div class="card h-100" style="width: 90%;">
                         <img src="img/bisonte-de-altamira.JPG" class="card-img-top"
@@ -154,7 +185,7 @@
                     </div>
                 </div>
 
-                <!-- Segunda obra -->
+                <!-- Segunda obra de la coleccion -->
                 <div class="col-md-4">
                     <div class="card h-100" style="width: 90%;">
                         <img src="img/la-creacion-del-hombre.JPG" class="card-img-top" alt="La Creación del Hombre">
@@ -167,7 +198,7 @@
                     </div>
                 </div>
 
-                <!-- Tercera obra -->
+                <!-- Tercera obra de la coleccion -->
                 <div class="col-md-4">
                     <div class="card h-100" style="width: 90%;">
                         <img src="img/cristo-muerto.JPG" class="card-img-top" alt="Cristo Muerto">
@@ -184,16 +215,19 @@
         </section>
     </main>
 
-    <!-- Pie de página -->
+    <!-- Pie de pagina de la aplicacion -->
     <footer>
         <p>Campus Jalpa – Arte y Cultura</p>
     </footer>
 
+    <!-- Archivo JavaScript de Bootstrap para el funcionamiento del menu y carrusel -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
         crossorigin="anonymous"></script>
 
+    <!-- Archivo donde se realizan las busquedas y se muestran los resultados -->
     <script src="js/script.js"></script>
+
 </body>
 
 </html>

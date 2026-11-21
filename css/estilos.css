@@ -1,70 +1,71 @@
-/* Estilos de la barra de navegacion */
+/* Color de fondo de la barra de navegacion */
 .navbar-arte {
     background-color: #1E3C2A;
 }
 
-/* Nombre de la pagina */
+/* Nombre de la pagina en color blanco y mayusculas */
 .navbar-arte .navbar-brand {
     color: white;
     text-transform: uppercase;
 }
 
-/* Enlaces del menu */
+/* Color de los enlaces del menu */
 .navbar-arte .nav-link {
     color: white;
 }
 
-/* Color blanco para el enlace activo */
+/* Mantenemos el enlace activo en color blanco */
 .navbar-arte .navbar-nav .nav-link.active {
     color: white;
 }
 
-/* Subrayado al pasar el cursor */
+/* Subrayamos los enlaces cuando pasamos el cursor */
 .navbar-arte .nav-link:hover {
     color: white;
     text-decoration: underline;
 }
 
-/* Boton del menu responsivo */
+/* Cambiamos el icono del menu responsivo a color blanco */
 .navbar-arte .navbar-toggler-icon {
     filter: invert(1);
 }
 
-/* Tamaño de los titulos de las tarjetas */
+/* Tamaño de los titulos de las tarjetas de arte */
 .card-title {
     font-size: 18px;
 }
 
-/* Pie de página */
+/* Color de fondo y espacio interior del pie de pagina */
 footer {
     background-color: #1E3C2A;
     padding: 25px;
 }
 
+/* Tamaño, grosor y color del texto del pie de pagina */
 footer p {
     font-size: 25px;
     font-weight: bold;
     color: white;
 }
 
-/* Color de fondo de la pagina */
+/* Color de fondo general de la pagina */
 body {
     background-color: #FBF5EE;
 }
 
-/* Margen del contenido principal */
+/* Espacio exterior del contenido principal */
 main {
     margin: 10px;
 }
 
-/* Panel de busqueda */
+/* Estilos del panel donde se realizan las busquedas */
 #cuadro-de-busqueda {
     padding: 15px;
     background-color: #D6CCC0;
     border-radius: 10px;
 }
 
-/* Estilos de las obras encontradas */
+/* Apariencia de los contenedores de las obras encontradas */
 .publicacion {
     background-color: white;
     border: 1px solid #ccc;
@@ -72,6 +73,7 @@ main {
     border-radius: 10px;
 }
 
+/* Ajustamos las imagenes para que ocupen todo el ancho disponible */
 .publicacion img {
     width: 100%;
     border-radius: 5px;
