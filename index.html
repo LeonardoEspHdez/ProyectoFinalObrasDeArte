@@ -84,6 +84,7 @@
                     </label>
 
                     <input type="text" class="form-control" id="cadenaBusqueda" required />
+                    <p id="errorBusqueda" class="text-danger small mb-0" aria-live="polite"></p>
                 </div>
 
                 <div class="form-check">
@@ -119,6 +120,13 @@
                 </button>
 
             </form>
+        </section>
+
+        <!-- sección para mostrar los resultados -->
+        <section class="container mt-3" id="seccion-respuestas">
+            <div class="row">
+                <section class="col mt-2" id="publicaciones"></section>
+            </div>
         </section>
 
         <!-- Explora la colección de arte -->
