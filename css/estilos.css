@@ -78,3 +78,16 @@ main {
     width: 100%;
     border-radius: 5px;
 }
+
+/* Ajustamos y centramos la linea de la coleccion */
+#coleccion hr {
+    width: 96.7%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Centramos las tarjetas de la coleccion */
+#coleccion .card {
+    margin-left: auto;
+    margin-right: auto;
+}
